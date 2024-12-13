@@ -45,6 +45,9 @@ dbconnect();
 //routes
 app.use('/api/auth', require('./Routes/AuthRoutes'));
 
+app.get('/', (req, res) => {
+  res.send('Hello, world! This is the homepage.');
+});
 
 const port = 5000;
 app.listen( port , ()=>{
